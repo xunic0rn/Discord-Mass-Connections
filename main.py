@@ -32,4 +32,5 @@ if __name__ == '__main__':
     token = input("Paste your discord user token here\n> ")
     amount = int(input("How many connections do you want?\n> "))
     print("-----------------------------------")
+    time.sleep(3)
     AddConn(name, token, amount)
