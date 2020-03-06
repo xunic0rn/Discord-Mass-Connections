@@ -24,7 +24,7 @@ def AddConn(name, token, amount):
         except Exception as e:
             print(e)
         else:
-            break 
+            print(r.text);break
 
 if __name__ == '__main__':
     print("-----------------------------------")
