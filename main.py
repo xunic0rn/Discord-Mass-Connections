@@ -8,6 +8,7 @@ ID  = random.randrange(10000000, 90000000)
 print("-----------------------------------")
 name = input("What do you want the name of the connection be?\n>")
 token = input("Paste your discord user token here\n>")
+amount = int(input("How many connections do you want?\n>"))
 time.sleep(3)
 print(f"{Fore.RED}WARNING: {Fore.RESET}Close this program when you feel like you have enough connections!")
 print("-----------------------------------")
@@ -22,7 +23,7 @@ headers = {
     'Content-Type':'application/json', 
 }
 
-while True:
+for _i in range(amount):
         try:
                 time.sleep(10) # 10 seconds sleep time so you dont flood discord requests
                 r = requests.put(f'https://canary.discordapp.com/api/v6/users/@me/connections/{type}/{ID}', data=json.dumps(payload), headers=headers)
