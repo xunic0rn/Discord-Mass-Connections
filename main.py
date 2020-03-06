@@ -3,16 +3,7 @@ from colorama import Fore
 
 colorama.init()
 
-ID  = random.randrange(10000000, 90000000)
-
-print("-----------------------------------")
-name = input("What do you want the name of the connection be?\n>")
-token = input("Paste your discord user token here\n>")
-amount = int(input("How many connections do you want?\n>"))
-print(f"{Fore.RED}WARNING: {Fore.RESET}Close this program when you feel like you have enough connections!")
-print("-----------------------------------")
-
-def AddConn():
+def AddConn(name, token, amount):
     payload = {
         'name': name,
         'visibility': 1 
@@ -21,6 +12,7 @@ def AddConn():
         'Authorization': token,
         'Content-Type':'application/json', 
     }
+    ID = random.randrange(10000000, 90000000)
     for _i in range(amount):
         try:
             time.sleep(10) # 10 seconds sleep time so you dont flood discord requests
@@ -33,3 +25,12 @@ def AddConn():
             print(e)
         else:
             break 
+
+if __name__ == '__main__':
+    print("-----------------------------------")
+    name = input("What do you want the name of the connection be?\n>")
+    token = input("Paste your discord user token here\n>")
+    amount = int(input("How many connections do you want?\n>"))
+    print(f"{Fore.RED}WARNING: {Fore.RESET}Close this program when you feel like you have enough connections!")
+    print("-----------------------------------")
+    AddConn(name, token, amount)
