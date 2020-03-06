@@ -1,2 +1,2 @@
 # Discord Mass Connections
-  - Add a lot of connections to your discord profile to be a cool kid
+  - Add a lot of spoofed connections to your discord profile to be a cool kid
