@@ -1,5 +1,5 @@
 import random, requests, json, time
-from colorama import Fore
+from colorama import Fore, init
 
 init(convert=True)
 
