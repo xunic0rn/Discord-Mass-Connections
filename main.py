@@ -22,9 +22,9 @@ def AddConn(name, token, amount):
             elif 'Unauthorized' in r.text:
                 print(f"{Fore.RED}[-] Improper token has been passed!"+Fore.RESET);break
             else:
-                print(f"{Fore.RED}[-] Couldnt add connection!"+Fore.RESET)
+                print(f"{Fore.RED}[-] Couldnt add connection!"+Fore.RESET);break
         except (Exception, ValueError) as e:
-            print(e)
+            print(e);break
 
 if __name__ == '__main__':
     print("-----------------------------------")
