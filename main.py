@@ -18,11 +18,11 @@ def AddConn(name, token, amount):
             time.sleep(10) # 10 seconds sleep time so you dont flood discord requests
             r = requests.put(f'https://canary.discordapp.com/api/v6/users/@me/connections/{type}/{ID}', data=json.dumps(payload), headers=headers)
             if r.status_code == 200:
-                print(f"{Fore.GREEN}[+] New connection added!"+Fore.RESET)
+                print(f"[{Fore.GREEN}+{Fore.RESET}] New connection added!")
             elif 'Unauthorized' in r.text:
-                print(f"{Fore.RED}[-] Improper token has been passed!"+Fore.RESET);break
+                print(f"[{Fore.RED}-{Fore.RESET}] Improper token has been passed!");break
             else:
-                print(f"{Fore.RED}[-] Couldnt add connection!"+Fore.RESET);break
+                print(f"[{Fore.RED}-{Fore.RESET}] Couldnt add connection!");break
         except (Exception, ValueError) as e:
             print(e);break
 
