@@ -1,7 +1,7 @@
-import random, requests, json, colorama, time
+import random, requests, json, time
 from colorama import Fore
 
-colorama.init()
+init(convert=True)
 
 def AddConn(name, token, amount):
     payload = {
