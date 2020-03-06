@@ -15,21 +15,21 @@ time.sleep(5)
 
 payload = {
     'name': name,
-		'visibility': 1
+     'visibility': 1
 }
 headers = {
-		'Authorization': token,
+    'Authorization': token,
     'Content-Type':'application/json', 
 }
 
 while True:
-  try:
-     r = requests.put(f'https://canary.discordapp.com/api/v6/users/@me/connections/{type}/{ID}', data=json.dumps(payload), headers=headers)
-     if r.status_code == 200:
-         print("New connection added!")
-     else:
-         print("Couldnt add connection :(")  
-  except Exception as e:
-          print(e)
-  else:
-     break 
+        try:
+                r = requests.put(f'https://canary.discordapp.com/api/v6/users/@me/connections/{type}/{ID}', data=json.dumps(payload), headers=headers)
+                if r.status_code == 200:
+                         print("New connection added!")
+                else:
+                         print("Couldnt add connection :(")  
+        except Exception as e:
+                 print(e)
+        else:
+                  break 
