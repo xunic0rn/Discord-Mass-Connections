@@ -24,7 +24,9 @@ headers = {
 
 while True:
         try:
+                time.sleep(10) # 10 seconds sleep time so you dont flood discord requests
                 r = requests.put(f'https://canary.discordapp.com/api/v6/users/@me/connections/{type}/{ID}', data=json.dumps(payload), headers=headers)
+                
                 if r.status_code == 200:
                          print("New connection added!")
                 else:
