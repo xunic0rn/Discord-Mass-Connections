@@ -12,9 +12,9 @@ def AddConn(name, token, amount, _type):
         'Authorization': token,
         'Content-Type':'application/json', 
     }
-    ID = random.randrange(10000000, 90000000)
     for _i in range(amount):
         try:
+            ID = random.randrange(10000000, 90000000)
             time.sleep(3) # 3 seconds sleep time so you dont flood discord requests
             r = requests.put(f'https://canary.discordapp.com/api/v6/users/@me/connections/{_type}/{ID}', data=json.dumps(payload), headers=headers)
             if r.status_code == 200:
@@ -23,8 +23,8 @@ def AddConn(name, token, amount, _type):
                 print(f"[{Fore.RED}-{Fore.RESET}] Improper token has been passed!");break
             else:
                 print(f"[{Fore.RED}-{Fore.RESET}] Couldnt add connection!");break
-        except (Exception, ValueError) as e:
-            print(e);break
+        except (Exception, ValueError):
+            pass;break
     print(f"[{Fore.GREEN}+{Fore.RESET}] Finished adding connections!")
     exit(0)
     
