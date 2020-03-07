@@ -32,7 +32,7 @@ if __name__ == '__main__':
     Valid connections:
      skype
      battlenet
-     leagueoflegends"""
+     leagueoflegends""")
     _type = input("What type of connection do you want?\n> ")      
     name = input("What do you want the name of the connection to be?\n> ")
     token = input("Paste your discord user token here\n> ")
