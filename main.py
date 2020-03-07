@@ -25,7 +25,10 @@ def AddConn(name, token, amount, _type):
                 print(f"[{Fore.RED}-{Fore.RESET}] Couldnt add connection!");break
         except (Exception, ValueError) as e:
             print(e);break
-
+    print(f"[{Fore.GREEN}+{Fore.RESET}] Finished adding connections!")
+    exit(0)
+    
+    
 if __name__ == '__main__':
     print("-----------------------------------")
     print("""
